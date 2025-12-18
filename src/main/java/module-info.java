@@ -1,6 +1,7 @@
 module com.example.groupassignment {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
 
     opens com.example.groupassignment to javafx.fxml;
