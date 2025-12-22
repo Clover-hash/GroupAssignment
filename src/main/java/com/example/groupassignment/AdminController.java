@@ -1,4 +1,4 @@
-package com.example.groupassignment.Admin;
+package com.example.groupassignment;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,9 +11,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 
-public class AdminLoginController {
+public class AdminController {
     public TextField usernameField;
     public PasswordField passwordField;
 
@@ -24,5 +23,10 @@ public class AdminLoginController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    private void TestFunction(ActionEvent event) throws IOException{
+        System.out.println("Correct");
     }
 }
