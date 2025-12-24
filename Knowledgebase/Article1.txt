@@ -1,4 +1,4 @@
-Title: Switching Scenes in JavaFX
+Switching Scenes in JavaFX
 
 Problem: Need to move between multiple screens (login, dashboard, settings) defined in different FXML files.
 

@@ -1,0 +1,8 @@
+Convolutional Neural Networks: Seeing Like a Computer
+
+Content:
+Convolutional Neural Networks (CNNs) are specialized neural networks designed for processing grid-like data, especially images. Unlike basic neural networks, which treat every input pixel independently, CNNs preserve spatial relationships by using convolutional filters that scan across the image.
+
+These filters automatically detect features such as edges, textures, and shapes. Early layers capture simple details, while deeper layers combine them into more complex patterns like eyes, wheels, or letters. After convolutional processing, CNNs typically use pooling layers to reduce dimensionality and focus on the most salient information.
+
+CNNs have become the standard architecture for tasks like object recognition, face detection, and medical image analysis. Their efficiency and accuracy stem from weight sharing (the same filter applied across the image) and hierarchical feature learning.
