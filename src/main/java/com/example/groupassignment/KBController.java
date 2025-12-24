@@ -27,6 +27,7 @@ public class KBController {
         //go through all files in the folder
         Path folder = Paths.get("C:\\Users\\Hokianto\\Desktop\\Projects\\GroupAssignment\\Knowledgebase");
         try (Stream<Path> stream = Files.list(folder)){
+            //go in file
             stream.filter(Files::isRegularFile).forEach(path -> {
                 //read the first line
                 try(BufferedReader reader = Files.newBufferedReader(path)){
@@ -36,10 +37,8 @@ public class KBController {
                     throw new RuntimeException(e);
                 }
             });
+            //if not found go next file
         }
-
-        //go next file
-
         //go till the end
     }
     private ArrayList<String> allItems = new ArrayList<String>();
@@ -66,11 +65,16 @@ public class KBController {
     }
     private void openArticle(String item, MouseEvent event) throws IOException {
         System.out.println(item + " Worked");
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/groupassignment/KB/ArticleReader.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/groupassignment/KB/ArticleReader.fxml"));
+        Parent root = loader.load();
+
+
+        ArticleController controller = loader.getController();
+        controller.initialize(item);          //take item as parameter to read the file and pass it to article controller
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
-        //take item as parameter to read the file and pass it to article controller
-        ArticleController.initialize(item);
+
         stage.show();
 
     }
