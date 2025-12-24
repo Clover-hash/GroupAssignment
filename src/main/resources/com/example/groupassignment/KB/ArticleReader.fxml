@@ -27,6 +27,6 @@
                </children></AnchorPane>
          </children>
       </HBox>
-      <Label fx:id="TextArea" alignment="TOP_CENTER" prefHeight="305.0" prefWidth="600.0" text="BITCH" />
+      <Label fx:id="TextArea" wrapText="true" alignment="CENTER" textAlignment="CENTER" prefHeight="305.0" prefWidth="600.0" text="BITCH" />
    </children>
 </VBox>

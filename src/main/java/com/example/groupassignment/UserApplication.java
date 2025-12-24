@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 
-public class HelloApplication extends Application {
+public class UserApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        URL fxml = getClass().getResource("Admin/AdminLogin.fxml");
+        URL fxml = getClass().getResource("UserStuff/UserLogin.fxml");
         FXMLLoader loader = new FXMLLoader(fxml);
-        Scene scene = new Scene(loader.load(), 320, 420);
+        Scene scene = new Scene(loader.load(), 395, 297);
         stage.setScene(scene);
         stage.show();
     }

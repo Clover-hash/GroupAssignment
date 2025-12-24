@@ -11,9 +11,9 @@
          <Font name="Berlin Sans FB Demi Bold" size="20.0" />
       </font></Label>
 
-    <TextField fx:id="usernameField" prefHeight="31.0" prefWidth="283.0" promptText="ENTER YOUR USERNAME" />
+    <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="233.0" promptText="ENTER YOUR USERNAME" />
 
-    <PasswordField fx:id="passwordField" promptText="ENTER YOUR PASSWORD" />
+    <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="236.0" promptText="ENTER YOUR PASSWORD" />
 
     <Button onAction="#handleLogin" text="LOGIN" />
    <Button layoutX="126.0" layoutY="245.0" onAction="#handleLogin" text="BACK" />
