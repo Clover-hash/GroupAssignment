@@ -18,7 +18,7 @@ import com.google.gson.reflect.TypeToken;
 
 public class UserStore {
 
-    private static final Path UserFile=Paths.get("C:\\Users\\Hokianto\\Desktop\\Projects\\GroupAssignment\\src\\main\\resources\\com\\example\\groupassignment\\UserData.json");
+    private static final Path UserFile=Paths.get("src/main/resources/com/example/groupassignment/UserData.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Type JsonToList= new TypeToken<List<User>>() {}.getType();
 
@@ -28,7 +28,8 @@ public class UserStore {
             return new ArrayList<>();
         }
         try(Reader reader = Files.newBufferedReader(UserFile)){
-            return GSON.fromJson(reader,JsonToList);
+            List<User> users = GSON.fromJson(reader, JsonToList);
+            return users == null ? new ArrayList<>() : users;
         }
     }
 

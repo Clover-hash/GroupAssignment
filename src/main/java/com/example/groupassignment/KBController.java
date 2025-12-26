@@ -1,5 +1,6 @@
 package com.example.groupassignment;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -23,9 +24,9 @@ public class KBController {
     @FXML private TextField searchField;
     @FXML private ListView<String> resultsList;
 
-    private void ReadArticleTitle(ArrayList<String> allItems) throws IOException {
+    protected static void ReadArticleTitle(ArrayList<String> allItems) throws IOException {
         //go through all files in the folder
-        Path folder = Paths.get("C:\\Users\\Hokianto\\Desktop\\Projects\\GroupAssignment\\Knowledgebase");
+        Path folder = Paths.get("Knowledgebase");
         try (Stream<Path> stream = Files.list(folder)){
             //go in file
             stream.filter(Files::isRegularFile).forEach(path -> {
@@ -41,7 +42,7 @@ public class KBController {
         }
         //go till the end
     }
-    private ArrayList<String> allItems = new ArrayList<String>();
+    protected static final ArrayList<String> allItems = new ArrayList<String>();
 
     @FXML
     private void initialize() throws IOException {
@@ -67,8 +68,6 @@ public class KBController {
         System.out.println(item + " Worked");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/groupassignment/KB/ArticleReader.fxml"));
         Parent root = loader.load();
-
-
         ArticleController controller = loader.getController();
         controller.initialize(item);          //take item as parameter to read the file and pass it to article controller
 
@@ -80,7 +79,7 @@ public class KBController {
     }
 
 
-    private void applyFilter(String query) {
+    protected void applyFilter(String query) {
         if (query.isEmpty()) {
             resultsList.setVisible(false);
             resultsList.setManaged(false);
@@ -97,5 +96,21 @@ public class KBController {
         searchField.clear();
         resultsList.setVisible(false);
         resultsList.setManaged(false);
+    }
+    @FXML
+    private void StartChatbot(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/groupassignment/Chatbot/Chatbot.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    @FXML
+    protected void Back(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/groupassignment/UserStuff/UserLogin.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -22,10 +22,12 @@ public class UserLoginController {
     public TextField username;
     public PasswordField password;
 
+    public static String user;
+
     @FXML
     protected void Login(ActionEvent event) {
         //check if valid credentials
-        String user = username.getText().trim();
+        user = username.getText().trim();
         String pass = password.getText();
 
         if (user.isEmpty() || pass.isEmpty()) {
@@ -64,7 +66,12 @@ public class UserLoginController {
     }
 
     @FXML
-    protected void AdminLogin(){
+    protected void AdminLogin(ActionEvent event) throws IOException {
         //pass to Admin Login
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/groupassignment/Admin/AdminLogin.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -17,8 +17,9 @@
     </Label>
     <HBox spacing="5" styleClass="search-bar">
         <Label prefHeight="17.0" prefWidth="26.0" />
-        <TextField fx:id="searchField" prefHeight="25.0" prefWidth="560.0" promptText="🔍 Search" HBox.hgrow="ALWAYS" />
-        <Button onAction="#handleClear" prefHeight="25.0" prefWidth="6.0" styleClass="clear-button" text="x" />
+        <TextField fx:id="searchField" prefHeight="25.0" prefWidth="550.0" promptText="🔍 Search" HBox.hgrow="ALWAYS" />
+        <Button onAction="#Back" prefHeight="25.0" prefWidth="6.0" styleClass="clear-button" text="x" />
     </HBox>
-    <ListView fx:id="resultsList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="545.0" styleClass="results-list" VBox.vgrow="ALWAYS" />
+    <ListView fx:id="resultsList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="545.0" styleClass="results-list" VBox.vgrow="ALWAYS" />
+   <Button mnemonicParsing="false" onAction="#StartChatbot" text="Start Chat" />
 </VBox>

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="259.0" prefWidth="283.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.AdminController">
+<VBox alignment="CENTER" prefHeight="259.0" prefWidth="283.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.Admin.AdminController">
 
     <Label prefHeight="41.0" prefWidth="134.0" text="ADMIN LOGIN">
       <font>
@@ -16,6 +16,6 @@
     <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="236.0" promptText="ENTER YOUR PASSWORD" />
 
     <Button onAction="#handleLogin" text="LOGIN" />
-   <Button layoutX="126.0" layoutY="245.0" onAction="#handleLogin" text="BACK" />
+   <Button layoutX="126.0" layoutY="245.0" onAction="#TestFunction" text="BACK" />
 
 </VBox>

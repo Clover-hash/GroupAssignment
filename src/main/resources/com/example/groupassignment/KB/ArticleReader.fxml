@@ -4,29 +4,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12"
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.groupassignment.ArticleController">
-   <children>
-      <HBox prefHeight="42.0" prefWidth="600.0">
-         <children>
-            <Label prefHeight="51.0" prefWidth="331.0" text="Clover's Knowledge Base">
-               <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="29.0" />
-               </font>
-            </Label>
-            <Separator opacity="0.0" prefHeight="41.0" prefWidth="160.0" />
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="110.0" text="Back" />
-         </children>
-      </HBox>
-      <HBox prefHeight="57.0" prefWidth="600.0">
-         <children>
-            <AnchorPane prefHeight="56.0" prefWidth="600.0">
-               <children>
-                  <TextField layoutX="113.0" layoutY="18.0" prefHeight="27.0" prefWidth="374.0" promptText="🔍 Search" />
-               </children></AnchorPane>
-         </children>
-      </HBox>
-      <Label fx:id="TextArea" wrapText="true" alignment="CENTER" textAlignment="CENTER" prefHeight="305.0" prefWidth="600.0" text="BITCH" />
-   </children>
+    <HBox prefHeight="42.0" prefWidth="600.0">
+        <Label prefHeight="51.0" prefWidth="331.0" text="Clover's Knowledge Base">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="29.0"/>
+            </font>
+        </Label>
+        <Separator opacity="0.0" prefHeight="41.0" prefWidth="160.0"/>
+        <Button mnemonicParsing="false" onAction="#Back" prefHeight="43.0" prefWidth="110.0" text="Back"/>
+    </HBox>
+    <ScrollPane prefHeight="357.0" prefWidth="600.0">
+        <TextArea fx:id="Article" editable="false" prefHeight="354.0" prefWidth="598.0" wrapText="true"/>
+    </ScrollPane>
 </VBox>
