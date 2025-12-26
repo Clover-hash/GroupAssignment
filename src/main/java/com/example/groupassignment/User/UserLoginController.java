@@ -22,10 +22,12 @@ public class UserLoginController {
     public TextField username;
     public PasswordField password;
 
+    public static String user;
+
     @FXML
     protected void Login(ActionEvent event) {
         //check if valid credentials
-        String user = username.getText().trim();
+        user = username.getText().trim();
         String pass = password.getText();
 
         if (user.isEmpty() || pass.isEmpty()) {
