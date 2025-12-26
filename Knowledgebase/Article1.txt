@@ -1,0 +1,49 @@
+Switching Scenes in JavaFX
+
+Problem: Need to move between multiple screens (login, dashboard, settings) defined in different FXML files.
+
+Key idea: Reuse the same Stage and either create a new Scene or change the root of the existing Scene when loading another FXML.
+
+Steps:
+
+Put all FXML files in the resources folder, for example:
+
+LoginView.fxml
+
+DashboardView.fxml
+
+In the controller, load the target FXML with FXMLLoader.
+
+Get the current Stage from any node in the event.
+
+Set the new Scene (or new root) on that Stage.
+
+Code example (create new Scene):
+@FXML
+private void handleLogin(ActionEvent event) throws IOException {
+Parent root = FXMLLoader.load(
+getClass().getResource("/com/example/app/DashboardView.fxml")
+);
+Stage stage = (Stage) ((Node) event.getSource())
+.getScene().getWindow();
+Scene scene = new Scene(root);
+stage.setScene(scene);
+stage.show();
+}
+
+Code example (reuse same Scene):
+@FXML
+private void goToSettings(ActionEvent event) throws IOException {
+Parent root = FXMLLoader.load(
+getClass().getResource("/com/example/app/SettingsView.fxml")
+);
+Scene scene = ((Node) event.getSource()).getScene();
+scene.setRoot(root);
+}
+
+Common errors:
+
+“Location is not set” or “Location is required”: the FXML path in getResource is wrong or the file is not under the resources folder.
+
+NullPointerException on FXMLLoader.load: getResource returned null, usually due to a missing leading “/” or a typo in the path.
+

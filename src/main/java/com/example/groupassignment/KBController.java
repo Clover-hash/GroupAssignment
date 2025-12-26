@@ -1,6 +1,5 @@
 package com.example.groupassignment;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -24,7 +23,7 @@ public class KBController {
     @FXML private TextField searchField;
     @FXML private ListView<String> resultsList;
 
-    protected static void ReadArticleTitle(ArrayList<String> allItems) throws IOException {
+    private void ReadArticleTitle(ArrayList<String> allItems) throws IOException {
         //go through all files in the folder
         Path folder = Paths.get("C:\\Users\\Hokianto\\Desktop\\Projects\\GroupAssignment\\Knowledgebase");
         try (Stream<Path> stream = Files.list(folder)){
@@ -42,7 +41,7 @@ public class KBController {
         }
         //go till the end
     }
-    protected static final ArrayList<String> allItems = new ArrayList<String>();
+    private ArrayList<String> allItems = new ArrayList<String>();
 
     @FXML
     private void initialize() throws IOException {
@@ -81,7 +80,7 @@ public class KBController {
     }
 
 
-    protected void applyFilter(String query) {
+    private void applyFilter(String query) {
         if (query.isEmpty()) {
             resultsList.setVisible(false);
             resultsList.setManaged(false);
@@ -98,21 +97,5 @@ public class KBController {
         searchField.clear();
         resultsList.setVisible(false);
         resultsList.setManaged(false);
-    }
-    @FXML
-    private void StartChatbot(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/groupassignment/Chatbot/Chatbot.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-    @FXML
-    protected void Back(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/groupassignment/UserStuff/UserLogin.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 }

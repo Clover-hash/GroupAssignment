@@ -16,6 +16,6 @@
     <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="236.0" promptText="ENTER YOUR PASSWORD" />
 
     <Button onAction="#handleLogin" text="LOGIN" />
-   <Button layoutX="126.0" layoutY="245.0" onAction="#TestFunction" text="BACK" />
+   <Button layoutX="126.0" layoutY="245.0" onAction="#handleLogin" text="BACK" />
 
 </VBox>
