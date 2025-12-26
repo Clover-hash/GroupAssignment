@@ -50,7 +50,11 @@ public class KBController {
         resultsList.setVisible(false);
         resultsList.setManaged(false);
 
-        ReadArticleTitle(allItems);
+        if (allItems.isEmpty()){
+            ReadArticleTitle(allItems);
+        }else{
+            System.out.println("Already loaded");
+        }
 
         searchField.textProperty().addListener((obs, old, val) -> applyFilter(val));
         resultsList.setOnMouseClicked(event -> {
@@ -70,10 +74,8 @@ public class KBController {
         Parent root = loader.load();
         ArticleController controller = loader.getController();
         controller.initialize(item);          //take item as parameter to read the file and pass it to article controller
-
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
-
         stage.show();
 
     }
