@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.User.UserRegisterController">
-   <Label fx:id="MainLabel" />
-    <TextField fx:id="username" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="484.0" promptText="Enter your username" />
-    <TextField fx:id="email" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="479.0" promptText="Enter your email" />
-    <PasswordField fx:id="password" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="483.0" promptText="Enter your password" />
-    <PasswordField fx:id="password2" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="478.0" promptText="Re-enter your password" />
-    <Button mnemonicParsing="false" onAction="#handleRegister" text="Register" />
-    <Button mnemonicParsing="false" onAction="#Back" text="Back" />
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="18.0" style="-fx-background-color: #dfe6ff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.User.UserRegisterController">
+
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+    <TextField fx:id="username" alignment="CENTER" prefHeight="45.0" prefWidth="480.0" promptText="ENTER YOUR USERNAME HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;" />
+    <TextField fx:id="email" alignment="CENTER" prefHeight="45.0" prefWidth="480.0" promptText="ENTER YOUR EMAIL HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;" />
+    <TextField fx:id="dob" alignment="CENTER" prefHeight="45.0" prefWidth="480.0" promptText="ENTER YOUR DATE OF BIRTH HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;" />
+    <PasswordField fx:id="password" alignment="CENTER" prefHeight="45.0" prefWidth="480.0" promptText="ENTER YOUR PASSWORD HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;" />
+    <PasswordField fx:id="password2" alignment="CENTER" prefHeight="45.0" prefWidth="480.0" promptText="RE-ENTER YOUR PASSWORD HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;" />
+    <Region prefHeight="10" />
+    <Button onAction="#handleRegister" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;" text="REGISTER" />
+    <Button onAction="#Back" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;" text="BACK" />
+
 </VBox>

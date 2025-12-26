@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="259.0" prefWidth="283.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.Admin.AdminController">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="22.0" style="-fx-background-color: #dfe6ff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.Admin.AdminController">
 
-    <Label prefHeight="41.0" prefWidth="134.0" text="ADMIN LOGIN">
-      <font>
-         <Font name="Berlin Sans FB Demi Bold" size="20.0" />
-      </font></Label>
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="60.0" />
+    </padding>
 
-    <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="233.0" promptText="ENTER YOUR USERNAME" />
 
-    <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="236.0" promptText="ENTER YOUR PASSWORD" />
+    <Label style="-fx-font-size: 36px; -fx-font-weight: bold;" text="ADMIN LOGIN" textFill="#4453ff">
+        <font>
+            <Font name="Bodoni MT Condensed" size="36.0" />
+        </font>
+    </Label>
 
-    <Button onAction="#handleLogin" text="LOGIN" />
-   <Button layoutX="126.0" layoutY="245.0" onAction="#TestFunction" text="BACK" />
+    <Region prefHeight="20" />
+
+
+    <TextField fx:id="usernameField" alignment="CENTER" prefHeight="45.0" prefWidth="460.0" promptText="ENTER YOUR USERNAME HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;" />
+    <PasswordField fx:id="passwordField" alignment="CENTER" prefHeight="45.0" prefWidth="460.0" promptText="ENTER YOUR PASSWORD HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;" />
+    <Region prefHeight="10" />
+    <Button onAction="#handleLogin" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;" text="LOGIN" />
+    <Button onAction="#TestFunction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;" text="BACK" />
 
 </VBox>

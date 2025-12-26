@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.KBController">
-    <Label layoutX="146.0" layoutY="184.0" text="Clover's ">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="600.0" style="-fx-background-color: #dfe6ff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.KBController">
+    <Label layoutX="146.0" layoutY="184.0" text="Clover's " textFill="#4453ff">
         <font>
           <Font name="Berlin Sans FB Demi Bold" size="45.0" />
         </font>
     </Label>
-    <Label text="Knowledge Base">
+    <Label text="Knowledge Base" textFill="#4453ff">
         <font>
           <Font name="Berlin Sans FB Demi Bold" size="45.0" />
         </font>
