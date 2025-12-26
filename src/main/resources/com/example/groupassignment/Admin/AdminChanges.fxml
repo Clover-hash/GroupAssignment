@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" style="-fx-background-color: #f2f3ff; -fx-padding: 20 30 30 30;"
+      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.Admin.ChangesController">
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <Label style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #4453ff;" text="CHANGES MADE" />
+
+        <Pane HBox.hgrow="ALWAYS" />
+
+        <Button fx:id="backButton" onAction="#Back" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 25 8 25;" text="BACK" />
+    </HBox>
+
+    <VBox alignment="TOP_CENTER" spacing="0">
+        <HBox alignment="CENTER_LEFT" spacing="40" style="-fx-background-color: #4453ff; -fx-background-radius: 20 20 0 0; -fx-padding: 10 20 10 20;" />
+
+
+        <TableView fx:id="changesTable" prefHeight="400" style="-fx-background-radius: 0 0 20 20; -fx-border-radius: 0 0 20 20;">
+            <columns>
+                <TableColumn fx:id="dateColumn" prefWidth="120" text="Date" />
+                <TableColumn fx:id="categoryColumn" prefWidth="180" text="Category" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="320" text="Description" />
+                <TableColumn fx:id="doneByColumn" prefWidth="140" text="Done by" />
+            </columns>
+        </TableView>
+    </VBox>
+</VBox>

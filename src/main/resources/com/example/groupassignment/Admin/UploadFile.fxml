@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" spacing="15.0" style="-fx-background-color: #dfe6ff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.Admin.KBUploadController">
+
+    <padding>
+        <Insets bottom="20.0" left="30.0" right="30.0" top="25.0" />
+    </padding>
+
+
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <Label style="-fx-text-fill: #4453ff; -fx-font-size: 32px; -fx-font-weight: bold;" text="UPDATE KNOWLEDGE BASE">
+            <font>
+                <Font name="System" size="32.0" />
+            </font>
+        </Label>
+        <Pane HBox.hgrow="ALWAYS" />
+        <Button onAction="#BackToDashboard" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: transparent;" text="BACK" />
+    </HBox>
+
+    <HBox alignment="CENTER">
+        <Button fx:id="UploadButton" onAction="#UploadFile" prefHeight="45.0" prefWidth="500.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;" text="CLICK HERE TO UPLOAD FILES" />
+    </HBox>
+    <HBox spacing="10.0" VBox.vgrow="ALWAYS">
+        <VBox prefWidth="200.0" spacing="8.0">
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label style="-fx-font-size: 16px;" text="🔍" />
+                <TextField fx:id="searchField" prefWidth="169.0" promptText="Search" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" />
+            </HBox>
+            <ListView fx:id="TitleView" VBox.vgrow="ALWAYS">
+            </ListView>
+        </VBox>
+        <VBox prefWidth="650.0" spacing="8.0" style="-fx-background-color: #4453ff; -fx-background-radius: 20; -fx-padding: 15 15 15 15;">
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="Content" HBox.hgrow="ALWAYS" />
+                <Pane HBox.hgrow="ALWAYS" />
+                <Button fx:id="EditSaveBtn" onAction="#ToggleEditSave" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: transparent;" text="EDIT" />
+                <Button onAction="#DeleteFile" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: transparent;" text="DELETE" />
+            </HBox>
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                <TextArea fx:id="contentArea" editable="false" prefHeight="355.0" prefWidth="608.0" style="-fx-text-fill: black; -fx-font-size: 14px; -fx-background-color: transparent;" wrapText="true" />
+            </ScrollPane>
+        </VBox>
+    </HBox>
+</VBox>

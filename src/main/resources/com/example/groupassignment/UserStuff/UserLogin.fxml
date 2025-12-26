@@ -5,18 +5,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="297.0" prefWidth="395.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.User.UserLoginController">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="25.0" style="-fx-background-color: #dfe6ff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.User.UserLoginController">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
     </padding>
 
-    <Label fx:id="MainLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="355.0" text="Welcome to Clover's Knowledge Base" textAlignment="CENTER" textFill="#0026ff" wrapText="true">
-      <font>
-         <Font name="Berlin Sans FB Demi Bold" size="34.0" />
-      </font></Label>
-   <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="299.0" promptText="Enter your Username here" />
-   <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="299.0" promptText="Enter your Password here" />
-   <Button mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="64.0" text="LOGIN" />
-    <Button onAction="#Register" text="REGISTER" />
-   <Button mnemonicParsing="false" onAction="#AdminLogin" prefHeight="15.0" prefWidth="90.0" text="Admin Login" />
+    <Label fx:id="MainLabel" prefHeight="106.0" prefWidth="450.0" style="-fx-text-fill: #4453ff; -fx-font-size: 36px; -fx-font-weight: bold;" text="WELCOME TO CLOVER'S    KNOWLEDGE BASE" textAlignment="CENTER" wrapText="true">
+        <font>
+            <Font name="System" size="36.0" />
+        </font>
+    </Label>
+    <Region prefHeight="20" />
+    <TextField fx:id="username" prefHeight="45.0" prefWidth="420.0" promptText="ENTER YOUR USERNAME HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;">
+    </TextField>
+    <PasswordField fx:id="password" prefHeight="45.0" prefWidth="420.0" promptText="ENTER YOUR PASSWORD HERE" style="-fx-background-color: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent; -fx-font-size: 12px; -fx-alignment: CENTER;">
+    </PasswordField>
+    <Region prefHeight="10" />
+    <Button onAction="#Login" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;" text="LOGIN" />
+    <Button onAction="#Register" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;" text="REGISTER" />
+    <Button onAction="#AdminLogin" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: #000000; -fx-font-size: 12px; -fx-underline: true;" text="Admin Login" />
 </VBox>

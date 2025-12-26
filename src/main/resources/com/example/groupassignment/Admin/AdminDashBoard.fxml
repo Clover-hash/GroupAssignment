@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.Admin.AdminDashboardController">
-   <Label prefHeight="67.0" prefWidth="478.0" text="Admin Dashboard">
-      <font>
-         <Font name="Berlin Sans FB Demi Bold" size="57.0" />
-      </font>
-   </Label>
-    <Button mnemonicParsing="false" onAction="#UpdateKB" prefHeight="42.0" prefWidth="210.0" text="Update Knowledge Base">
-      <font>
-         <Font size="17.0" />
-      </font></Button>
-   <Button layoutX="281.0" layoutY="248.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#ViewReports" prefHeight="38.0" prefWidth="181.0" text="Review Queries">
-      <font>
-         <Font size="17.0" />
-      </font></Button>
-   <Button layoutX="281.0" layoutY="244.0" mnemonicParsing="false" onAction="#ViewChanges" prefHeight="38.0" prefWidth="204.0" text="View Changes Made">
-      <font>
-         <Font size="17.0" />
-      </font></Button>
-   <Button layoutX="208.0" layoutY="295.0" mnemonicParsing="false" onAction="#Logout" prefHeight="38.0" prefWidth="73.0" text="Back">
-      <font>
-         <Font size="17.0" />
-      </font>
-   </Button>
+<VBox alignment="CENTER"
+      prefHeight="600.0" prefWidth="800.0"
+      spacing="22.0"
+      style="-fx-background-color: #dfe6ff;"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.groupassignment.Admin.AdminDashboardController">
+
+    <padding>
+        <Insets top="60.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+
+    <Label text="ADMIN DASHBOARD" textAlignment="CENTER" style="-fx-text-fill: #4453ff; -fx-font-size: 36px; -fx-font-weight: bold;">
+        <font>
+            <Font name="System" size="36.0"/>
+        </font>
+    </Label>
+    <Region prefHeight="20"/>
+    <Button text="UPDATE KNOWLEDGE BASE" onAction="#UpdateKB" prefWidth="420.0" prefHeight="45.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;"/>
+    <Button text="REVIEW QUERIES" onAction="#ViewReports" prefWidth="420.0" prefHeight="45.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;"/>
+    <Button text="VIEW CHANGES MADE" onAction="#ViewChanges" prefWidth="420.0" prefHeight="45.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;"/>
+    <Region prefHeight="10"/>
+    <Button text="BACK" onAction="#Logout" prefWidth="200.0" prefHeight="40.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: transparent;"/>
+
 </VBox>
