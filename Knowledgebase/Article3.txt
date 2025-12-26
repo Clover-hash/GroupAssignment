@@ -1,8 +1,8 @@
-The Training System That Makes Uma Musume Addictive
+I Was Charged the Wrong Amount. What Should I Do?
 
-Content:
-One of the most defining features of Uma Musume: Pretty Derby is its training system, which plays like a strategy simulation mixed with a roguelike loop. Players must manage a character’s schedule, balancing training, rest, races, and social interactions over a fixed career timeline.
+Answer:
+Fare or price adjustments can happen due to route changes, waiting time, toll fees, or changes made during the trip or order. The final amount is calculated based on actual service usage.
 
-Every decision matters. Training too hard risks injury, while resting too often slows growth. Random events, support cards, and stat gains introduce unpredictability, making each playthrough feel different even with the same character. This uncertainty keeps players engaged and encourages repeated runs to achieve better outcomes.
+If you believe the charge is incorrect, go to Help > Past Orders/Rides, select the affected transaction, and choose “Fare or payment issue.” Our support system will review the details and process any eligible refunds automatically.
 
-The system rewards long-term planning rather than short-term gains, teaching players to think strategically. This depth is a major reason why many players find the game difficult to put down, as there is always a better build, a smarter strategy, or a more satisfying ending to pursue.
+You will be notified in the app once the review is complete.
