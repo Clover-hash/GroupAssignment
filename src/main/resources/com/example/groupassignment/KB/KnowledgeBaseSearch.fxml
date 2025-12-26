@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupassignment.KBController">
+    <Label layoutX="146.0" layoutY="184.0" text="Clover's ">
+        <font>
+          <Font name="Berlin Sans FB Demi Bold" size="45.0" />
+        </font>
+    </Label>
+    <Label text="Knowledge Base">
+        <font>
+          <Font name="Berlin Sans FB Demi Bold" size="45.0" />
+        </font>
+    </Label>
+    <HBox spacing="5" styleClass="search-bar">
+        <Label prefHeight="17.0" prefWidth="26.0" />
+        <TextField fx:id="searchField" prefHeight="25.0" prefWidth="550.0" promptText="🔍 Search" HBox.hgrow="ALWAYS" />
+        <Button onAction="#Back" prefHeight="25.0" prefWidth="6.0" styleClass="clear-button" text="x" />
+    </HBox>
+    <ListView fx:id="resultsList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="545.0" styleClass="results-list" VBox.vgrow="ALWAYS" />
+   <Button mnemonicParsing="false" onAction="#StartChatbot" text="Start Chat" />
+</VBox>
